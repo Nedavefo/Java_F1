@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.lab12.MainAppController">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Options">
+                    <MenuItem text="Search Driver #" />
+                </Menu>
+            </MenuBar>
+            <StackPane>
+                <HBox fx:id="topBar" styleClass="top-bar" prefHeight="50.0" />
+                <ImageView fx:id="logoImageView" fitHeight="40.0" fitWidth="110.0" styleClass="logo" />
+            </StackPane>
+        </VBox>
+    </top>
+    <left>
+        <VBox fx:id="leftVBox" spacing="10.0">
+            <TextField fx:id="driverNumberField" promptText="Enter Driver Number" styleClass="text-field" />
+            <Button fx:id="fetchButton" text="Search Driver" styleClass="button" />
+        </VBox>
+    </left>
+    <center>
+        <GridPane fx:id="centerGridPane" hgap="10.0" vgap="10.0">
+            <Label text="Broadcast Name:" />
+            <Label fx:id="broadcastNameValue" GridPane.columnIndex="1"/>
+            <Label text="Country Code:" GridPane.rowIndex="1" />
+            <Label fx:id="countryCodeValue" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Driver Number:" GridPane.rowIndex="2" />
+            <Label fx:id="driverNumberValue" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="First Name:" GridPane.rowIndex="3" />
+            <Label fx:id="firstNameValue" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Full Name:" GridPane.rowIndex="4" />
+            <Label fx:id="fullNameValue" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="Last Name:" GridPane.rowIndex="5" />
+            <Label fx:id="lastNameValue" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <Label text="Name Acronym:" GridPane.rowIndex="6" />
+            <Label fx:id="nameAcronymValue" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <Label text="Team Colour:" GridPane.rowIndex="7" />
+            <Label fx:id="teamColourValue" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <Label text="Team Name:" GridPane.rowIndex="8" />
+            <Label fx:id="teamNameValue" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+        </GridPane>
+    </center>
+    <right>
+        <VBox spacing="1.0" alignment="CENTER_LEFT">
+            <ImageView fx:id="headshotImageView"  fitHeight="200.0" fitWidth="150.0" preserveRatio="true"/>
+        </VBox>
+    </right>
+</BorderPane>

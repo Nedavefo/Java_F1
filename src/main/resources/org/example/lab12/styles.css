@@ -1,0 +1,28 @@
+/* styles.css */
+.root {
+    -fx-font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    -fx-background-color: black;
+    -fx-padding: 10;
+}
+
+.logo {
+    -fx-padding: 10;
+}
+
+.text-field, .button {
+    -fx-pref-width: 200px;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+.image-view {
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-padding: 5;
+}
